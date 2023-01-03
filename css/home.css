@@ -1,0 +1,35 @@
+.welcome {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  gap: 2rem;
+}
+
+.welcome.visible {
+  display: flex;
+}
+
+.welcome h1 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.welcome button {
+  padding: 1rem 2rem;
+  min-width: 16rem;
+}

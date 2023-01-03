@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>🔥 Memory game</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="css/globals.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <link href="css/card.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/modal.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="welcome" class="welcome">
+      <h1>Hey! 👋</h1>
+      <div class="welcome-buttons">
+        <button id="normal-game">I wanna play!</button>
+        <button id="relax-game">Relax Mode</button>
+      </div>
+    </div>
+    <header class="header">
+      <div class="counters">
+        <div class="counter-item">
+          <h4 class="header-title">Movements</h4>
+          <div class="header-number"><span id="mov">00</span>/<span id="total-movements">20</span></div>
+        </div>
+        <div id="chronometer" class="counter-item">
+          <h4 class="header-title">Time</h4>
+          <div class="header-number"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+        </div>
+      </div>
+      <div class="level">
+        <h4 class="header-title">Level</h4>
+        <div class="header-number"><span id="level">01</span> <button id="control-level" class="control-level">…</button></div>
+      </div>
+    </header>
+    <main>
+      <div id="table" class="table"></div>
+      <div id="upLevel" class="up-level">
+        <div class="modal">
+          <h2>Well done! 🔥</h2>
+          <button id="up-level">Next level</button>
+          <button class="restart">Restart</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>Oh no! 😭</h2>
+          <p>No moves left</p>
+          <button class="restart">Restart</button>
+        </div>
+      </div>
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>Oh no! 😭</h2>
+          <p>No time left</p>
+          <button class="restart">Restart</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>Congratulations! 🏆</h2>
+          <p>You have passed all levels</p>
+          <button class="restart">Restart</button>
+        </div>
+      </div>
+    </main>
+    <div class="select-level">
+      <button id="close-levels" class="close-levels">&times;</button>
+      <ul></ul>
+    </div>
+    <span class="social-buttons-wrapper">
+      <a class="social-button" href="https://twitter.com/anafdezv" target="_blank"
+        ><image src="icons/twitter.svg" alt="Twitter"
+      /></a>
+      <a class="social-button" href="https://github.com/anafdezv" target="_blank"
+        ><image src="icons/github.svg" alt="Twitter" /></a
+    ></span>
+
+    <audio src="sounds/success.mp3" class="sound" id="sound-success" preload="auto"></audio>
+    <audio src="sounds/failure.mp3" class="sound" id="sound-failure" preload="auto"></audio>
+
+    <script src="js/global-variables.js"></script>
+    <script src="js/discover-compare.js"></script>
+    <script src="js/deck-deals.js"></script>
+    <script src="js/success-failure.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/chronometer.js"></script>
+    <script src="js/finish.js"></script>
+    <script src="js/change-level.js"></script>
+    <script src="js/game-over.js"></script>
+    <script src="js/levels-menu.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/start-game.js"></script>
+  </body>
+</html>
